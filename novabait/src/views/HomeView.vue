@@ -27,7 +27,7 @@
             Soluciones completas para tu presencia digital
           </p>
         </header>
-        
+
         <div class="services-grid">
           <article class="service-card fade-in-up">
             <div class="service-icon">
@@ -93,8 +93,8 @@
         <div class="values-content fade-in-up">
           <h2 class="values-title">Novedad, Optimización, Velocidad, Adaptabilidad</h2>
           <p class="values-description">
-            Estos son los pilares que guían cada proyecto. Creamos soluciones que se adaptan 
-            a las necesidades de tu negocio, con tecnología de vanguardia y un enfoque en la 
+            Estos son los pilares que guían cada proyecto. Creamos soluciones que se adaptan
+            a las necesidades de tu negocio, con tecnología de vanguardia y un enfoque en la
             excelencia técnica.
           </p>
         </div>
@@ -137,7 +137,7 @@
   text-align: center;
   position: relative;
   overflow: hidden;
-  
+
   &::before {
     content: '';
     position: absolute;
@@ -148,7 +148,7 @@
     background: radial-gradient(circle at 50% 50%, rgba(74, 158, 255, 0.1) 0%, transparent 70%);
     pointer-events: none;
   }
-  
+
   @media (max-width: $breakpoint-mobile) {
     min-height: calc(100vh - 60px);
     padding: $spacing-lg 0;
@@ -168,16 +168,16 @@
   margin-bottom: $spacing-md;
   color: $color-text-primary;
   letter-spacing: -0.02em;
-  
+
   .highlight {
     color: $color-accent-light;
     display: block;
   }
-  
+
   @media (max-width: $breakpoint-tablet) {
     font-size: 3rem;
   }
-  
+
   @media (max-width: $breakpoint-mobile) {
     font-size: 2rem;
     margin-bottom: $spacing-sm;
@@ -192,7 +192,7 @@
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-  
+
   @media (max-width: $breakpoint-mobile) {
     font-size: 1rem;
     margin-bottom: $spacing-md;
@@ -204,7 +204,7 @@
   gap: $spacing-md;
   justify-content: center;
   flex-wrap: wrap;
-  
+
   @media (max-width: $breakpoint-mobile) {
     flex-direction: column;
     align-items: stretch;
@@ -223,30 +223,30 @@
   transition: all 0.3s ease;
   border: none;
   cursor: pointer;
-  
+
   &.btn-primary {
     background-color: $color-accent-light;
     color: $color-background;
-    
+
     &:hover {
       background-color: $color-accent-bright;
       transform: translateY(-2px);
       box-shadow: 0 8px 20px rgba(74, 158, 255, 0.3);
     }
   }
-  
+
   &.btn-secondary {
     background-color: transparent;
     color: $color-text-primary;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    
+
     &:hover {
       background-color: rgba(255, 255, 255, 0.1);
       border-color: $color-accent-light;
       color: $color-accent-light;
     }
   }
-  
+
   &.btn-large {
     padding: $spacing-md $spacing-xl;
     font-size: 1.1rem;
@@ -269,7 +269,7 @@
   margin-bottom: $spacing-sm;
   color: $color-text-primary;
   letter-spacing: -0.02em;
-  
+
   @media (max-width: $breakpoint-mobile) {
     font-size: 2rem;
   }
@@ -278,7 +278,7 @@
 .section-description {
   font-size: 1.2rem;
   color: $color-text-secondary;
-  
+
   @media (max-width: $breakpoint-mobile) {
     font-size: 1rem;
   }
@@ -288,7 +288,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: $spacing-lg;
-  
+
   @media (max-width: $breakpoint-mobile) {
     grid-template-columns: 1fr;
     gap: $spacing-md;
@@ -302,7 +302,7 @@
   padding: $spacing-lg;
   transition: all 0.3s ease;
   text-align: center;
-  
+
   &:hover {
     background-color: rgba(255, 255, 255, 0.04);
     border-color: rgba(74, 158, 255, 0.3);
@@ -316,7 +316,7 @@
   height: 64px;
   margin: 0 auto $spacing-md;
   color: $color-accent-light;
-  
+
   svg {
     width: 100%;
     height: 100%;
@@ -352,7 +352,7 @@
   margin-bottom: $spacing-md;
   color: $color-text-primary;
   line-height: 1.3;
-  
+
   @media (max-width: $breakpoint-mobile) {
     font-size: 1.8rem;
   }
@@ -362,7 +362,7 @@
   font-size: 1.2rem;
   color: $color-text-secondary;
   line-height: 1.8;
-  
+
   @media (max-width: $breakpoint-mobile) {
     font-size: 1rem;
   }
@@ -384,7 +384,7 @@
   font-weight: $font-weight-bold;
   margin-bottom: $spacing-md;
   color: $color-text-primary;
-  
+
   @media (max-width: $breakpoint-mobile) {
     font-size: 2rem;
   }
@@ -395,7 +395,7 @@
   color: $color-text-secondary;
   margin-bottom: $spacing-lg;
   line-height: 1.6;
-  
+
   @media (max-width: $breakpoint-mobile) {
     font-size: 1rem;
   }

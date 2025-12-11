@@ -11,7 +11,7 @@ onMounted(() => {
     isScrolled.value = window.scrollY > 20
   }
   window.addEventListener('scroll', handleScroll)
-  
+
   return () => {
     window.removeEventListener('scroll', handleScroll)
   }
@@ -32,16 +32,16 @@ const closeMenu = () => {
       <RouterLink to="/" class="logo-link" @click="closeMenu">
         <Logo />
       </RouterLink>
-      
-      <button 
-        class="menu-toggle" 
+
+      <button
+        class="menu-toggle"
         @click="toggleMenu"
         aria-label="Toggle menu"
         :aria-expanded="isMenuOpen"
       >
         <span class="menu-icon" :class="{ 'open': isMenuOpen }"></span>
       </button>
-      
+
       <ul class="nav-menu" :class="{ 'open': isMenuOpen }">
         <li><RouterLink to="/" @click="closeMenu">Inicio</RouterLink></li>
         <li><RouterLink to="/servicios" @click="closeMenu">Servicios</RouterLink></li>
@@ -71,7 +71,7 @@ const closeMenu = () => {
   -webkit-backdrop-filter: blur(20px);
   transition: all 0.3s ease;
   border-bottom: 1px solid transparent;
-  
+
   &.scrolled {
     background-color: rgba(0, 0, 0, 0.95);
     border-bottom-color: rgba(74, 158, 255, 0.1);
@@ -84,7 +84,7 @@ const closeMenu = () => {
   justify-content: space-between;
   padding: $spacing-sm $spacing-md;
   min-height: 70px;
-  
+
   @media (max-width: $breakpoint-mobile) {
     padding: $spacing-sm;
     min-height: 60px;
@@ -94,10 +94,10 @@ const closeMenu = () => {
 .logo-link {
   text-decoration: none;
   z-index: 1001;
-  
+
   :deep(.logo-text) {
     font-size: 1.8rem;
-    
+
     @media (max-width: $breakpoint-mobile) {
       font-size: 1.4rem;
     }
@@ -111,7 +111,7 @@ const closeMenu = () => {
   align-items: center;
   margin: 0;
   padding: 0;
-  
+
   @media (max-width: $breakpoint-tablet) {
     position: fixed;
     top: 0;
@@ -125,12 +125,12 @@ const closeMenu = () => {
     gap: $spacing-sm;
     transition: right 0.3s ease;
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5);
-    
+
     &.open {
       right: 0;
     }
   }
-  
+
   li {
     a {
       color: $color-text-primary;
@@ -141,7 +141,7 @@ const closeMenu = () => {
       border-radius: 4px;
       transition: all 0.3s ease;
       position: relative;
-      
+
       &::after {
         content: '';
         position: absolute;
@@ -153,33 +153,33 @@ const closeMenu = () => {
         background-color: $color-accent-light;
         transition: transform 0.3s ease;
       }
-      
+
       &:hover {
         color: $color-accent-light;
-        
+
         &::after {
           transform: translateX(-50%) scaleX(1);
         }
       }
-      
+
       &.router-link-active {
         color: $color-accent-light;
-        
+
         &::after {
           transform: translateX(-50%) scaleX(1);
         }
       }
-      
+
       &.cta-link {
         background-color: $color-accent-light;
         color: $color-background;
         padding: $spacing-xs $spacing-md;
         font-weight: $font-weight-medium;
-        
+
         &::after {
           display: none;
         }
-        
+
         &:hover {
           background-color: $color-accent-bright;
           color: $color-background;
@@ -187,7 +187,7 @@ const closeMenu = () => {
           box-shadow: 0 4px 12px rgba(74, 158, 255, 0.3);
         }
       }
-      
+
       @media (max-width: $breakpoint-tablet) {
         font-size: 1.1rem;
         padding: $spacing-sm;
@@ -205,7 +205,7 @@ const closeMenu = () => {
   cursor: pointer;
   padding: $spacing-xs;
   z-index: 1002;
-  
+
   @media (max-width: $breakpoint-tablet) {
     display: block;
   }
@@ -218,7 +218,7 @@ const closeMenu = () => {
   background-color: $color-text-primary;
   position: relative;
   transition: all 0.3s ease;
-  
+
   &::before,
   &::after {
     content: '';
@@ -228,23 +228,23 @@ const closeMenu = () => {
     background-color: $color-text-primary;
     transition: all 0.3s ease;
   }
-  
+
   &::before {
     top: -8px;
   }
-  
+
   &::after {
     top: 8px;
   }
-  
+
   &.open {
     background-color: transparent;
-    
+
     &::before {
       top: 0;
       transform: rotate(45deg);
     }
-    
+
     &::after {
       top: 0;
       transform: rotate(-45deg);
@@ -254,7 +254,7 @@ const closeMenu = () => {
 
 main {
   margin-top: 70px;
-  
+
   @media (max-width: $breakpoint-mobile) {
     margin-top: 60px;
   }
