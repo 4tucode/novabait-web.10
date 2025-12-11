@@ -35,3 +35,10 @@ coverage
 .env.*.local
 functions/.env
 functions/.env.local
+
+# Files with sensitive information
+CONFIGURAR_ENV.txt
+ENV_FILES_CONTENT.md
+crear-env-files.bat
+*.txt
+!README.txt
