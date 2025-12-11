@@ -163,6 +163,7 @@
 
 <script setup>
 import { ref } from 'vue'
+import { saveContactForm } from '../services/contactService'
 
 const form = ref({
   name: '',
@@ -181,11 +182,27 @@ const submitMessage = ref('')
 const submitMessageType = ref('')
 
 const handleSubmit = async () => {
+  // Validación básica
+  if (!form.value.name || !form.value.email || !form.value.projectType || !form.value.description) {
+    submitMessage.value = 'Por favor, completa todos los campos requeridos.'
+    submitMessageType.value = 'error'
+    return
+  }
+
+  if (!form.value.acceptTerms) {
+    submitMessage.value = 'Debes aceptar la política de privacidad para continuar.'
+    submitMessageType.value = 'error'
+    return
+  }
+
   isSubmitting.value = true
   submitMessage.value = ''
 
-  // Simulación de envío (aquí iría la lógica real de envío)
-  setTimeout(() => {
+  try {
+    // Guardar en Firestore
+    await saveContactForm(form.value)
+
+    // Éxito
     isSubmitting.value = false
     submitMessage.value = '¡Gracias por contactarnos! Te responderemos en breve.'
     submitMessageType.value = 'success'
@@ -207,7 +224,17 @@ const handleSubmit = async () => {
     setTimeout(() => {
       submitMessage.value = ''
     }, 5000)
-  }, 1500)
+  } catch (error) {
+    // Error
+    isSubmitting.value = false
+    submitMessage.value = error.message || 'Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo.'
+    submitMessageType.value = 'error'
+
+    // Clear error message after 5 seconds
+    setTimeout(() => {
+      submitMessage.value = ''
+    }, 5000)
+  }
 }
 </script>
 

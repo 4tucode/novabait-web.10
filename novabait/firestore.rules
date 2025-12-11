@@ -1,0 +1,19 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Reglas para la colección de contactos
+    match /contacts/{contactId} {
+      // Permitir escritura desde el cliente (solo creación)
+      allow create: if true;
+      // No permitir lectura ni escritura desde el cliente
+      // Solo las Cloud Functions pueden leer/escribir
+      allow read, update, delete: if false;
+    }
+    
+    // Bloquear todo lo demás
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
+

@@ -1,0 +1,47 @@
+═══════════════════════════════════════════════════════════════
+  CONTENIDO PARA LOS ARCHIVOS .env
+═══════════════════════════════════════════════════════════════
+
+📁 ARCHIVO: novabait/.env (Raíz del proyecto)
+───────────────────────────────────────────────────────────────
+
+# Firebase Configuration
+VITE_FIREBASE_API_KEY=AIzaSyAibS6jGbJBYk-y_aNqEbpIOOXKoDDwLjA
+VITE_FIREBASE_AUTH_DOMAIN=novabait.firebaseapp.com
+VITE_FIREBASE_PROJECT_ID=novabait
+VITE_FIREBASE_STORAGE_BUCKET=novabait.firebasestorage.app
+VITE_FIREBASE_MESSAGING_SENDER_ID=741724005006
+VITE_FIREBASE_APP_ID=1:741724005006:web:5bbdffe3f03045887f9fdf
+
+
+📁 ARCHIVO: novabait/functions/.env (Carpeta functions)
+───────────────────────────────────────────────────────────────
+
+# Gmail Configuration for Email Sending
+# IMPORTANTE: Usa una contraseña de aplicación, no tu contraseña normal
+# Para generar una contraseña de aplicación:
+# 1. Ve a https://myaccount.google.com/security
+# 2. Activa la verificación en 2 pasos (si no está activada)
+# 3. Ve a "Contraseñas de aplicaciones" y genera una nueva
+# 4. Usa esa contraseña aquí
+
+GMAIL_EMAIL=tu-email@gmail.com
+GMAIL_PASSWORD=tu-contraseña-de-aplicacion
+
+# Email donde recibirás las notificaciones de nuevos contactos
+COMPANY_EMAIL=contacto@novabait.com
+
+
+═══════════════════════════════════════════════════════════════
+  INSTRUCCIONES
+═══════════════════════════════════════════════════════════════
+
+1. Copia el contenido del primer bloque al archivo .env en la raíz
+2. Copia el contenido del segundo bloque al archivo .env en functions/
+3. Reemplaza en functions/.env:
+   - tu-email@gmail.com → Tu email de Gmail
+   - tu-contraseña-de-aplicacion → Tu contraseña de aplicación
+   - contacto@novabait.com → Email donde recibir notificaciones
+
+═══════════════════════════════════════════════════════════════
+
