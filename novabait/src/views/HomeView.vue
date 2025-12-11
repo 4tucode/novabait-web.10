@@ -12,7 +12,7 @@
           Diseño minimalista, rendimiento óptimo y experiencia de usuario excepcional.
         </p>
         <div class="hero-actions">
-          <a href="#contacto" class="btn btn-primary">Comenzar Proyecto</a>
+          <RouterLink to="/contacto" class="btn btn-primary">Comenzar Proyecto</RouterLink>
           <a href="#servicios" class="btn btn-secondary">Ver Servicios</a>
         </div>
       </div>
@@ -43,18 +43,6 @@
             </p>
           </article>
 
-          <article class="service-card fade-in-up">
-            <div class="service-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="3" y="3" width="18" height="18" rx="2"/>
-                <path d="M9 9h6v6H9z"/>
-              </svg>
-            </div>
-            <h3 class="service-title">Aplicaciones Web</h3>
-            <p class="service-description">
-              Aplicaciones web personalizadas que optimizan procesos y mejoran la productividad de tu equipo.
-            </p>
-          </article>
 
           <article class="service-card fade-in-up">
             <div class="service-icon">
@@ -109,7 +97,7 @@
           <p class="cta-description">
             Hablemos sobre tu proyecto y cómo podemos ayudarte a alcanzar tus objetivos digitales.
           </p>
-          <a href="#contacto" class="btn btn-primary btn-large">Contactar Ahora</a>
+          <RouterLink to="/contacto" class="btn btn-primary btn-large">Contactar Ahora</RouterLink>
         </div>
       </div>
     </section>
@@ -117,7 +105,7 @@
 </template>
 
 <script setup>
-// HomeView component
+import { RouterLink } from 'vue-router'
 </script>
 
 <style lang="scss" scoped>

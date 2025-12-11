@@ -27,7 +27,7 @@ const router = createRouter({
     {
       path: '/contacto',
       name: 'contacto',
-      component: HomeView, // Temporal, redirige a home con scroll
+      component: () => import('../views/ContactView.vue'),
     },
   ],
   scrollBehavior(to) {
