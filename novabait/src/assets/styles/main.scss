@@ -1,0 +1,109 @@
+// Variables de color basadas en la paleta del logo
+$color-primary-dark: #1a1a2e;      // Azul oscuro principal
+$color-primary-medium: #16213e;    // Azul oscuro medio
+$color-accent-light: #4a9eff;      // Azul claro (puntos del logo)
+$color-accent-bright: #6bb6ff;     // Azul brillante
+$color-text-primary: #ffffff;       // Texto principal (blanco)
+$color-text-secondary: #b8c5d6;    // Texto secundario
+$color-background: #000000;        // Fondo negro
+$color-background-section: #0a0a0f; // Fondo de secciones
+
+// Tipografía
+$font-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// Espaciado
+$spacing-xs: 0.5rem;
+$spacing-sm: 1rem;
+$spacing-md: 2rem;
+$spacing-lg: 4rem;
+$spacing-xl: 6rem;
+$spacing-xxl: 8rem;
+
+// Breakpoints
+$breakpoint-mobile: 768px;
+$breakpoint-tablet: 1024px;
+$breakpoint-desktop: 1440px;
+
+// Reset y base
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-primary;
+  background-color: $color-background;
+  color: $color-text-primary;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+#app {
+  min-height: 100vh;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+// Utilidades
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $spacing-md;
+  
+  @media (min-width: $breakpoint-desktop) {
+    max-width: 1400px;
+    padding: 0 $spacing-lg;
+  }
+}
+
+.section {
+  padding: $spacing-xxl 0;
+  
+  @media (max-width: $breakpoint-mobile) {
+    padding: $spacing-lg 0;
+  }
+}
+
+// Animaciones
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-out;
+}
+
