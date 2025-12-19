@@ -73,3 +73,4 @@ Después de limpiar el historial:
 
 El archivo `test-email.js` no tenía credenciales hardcodeadas (solo usaba variables de entorno), pero fue eliminado para evitar falsos positivos en GitGuardian.
 
+
