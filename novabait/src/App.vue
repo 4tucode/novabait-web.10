@@ -45,7 +45,6 @@ const closeMenu = () => {
       <ul class="nav-menu" :class="{ 'open': isMenuOpen }">
         <li><RouterLink to="/" @click="closeMenu">Inicio</RouterLink></li>
         <li><RouterLink to="/servicios" @click="closeMenu">Servicios</RouterLink></li>
-        <li><RouterLink to="/proyectos" @click="closeMenu">Proyectos</RouterLink></li>
         <li><RouterLink to="/sobre-nosotros" @click="closeMenu">Sobre Nosotros</RouterLink></li>
         <li><RouterLink to="/contacto" @click="closeMenu" class="cta-link">Contacto</RouterLink></li>
       </ul>

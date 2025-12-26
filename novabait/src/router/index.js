@@ -15,14 +15,9 @@ const router = createRouter({
       component: HomeView, // Temporal, redirige a home con scroll
     },
     {
-      path: '/proyectos',
-      name: 'proyectos',
-      component: HomeView, // Temporal, redirige a home con scroll
-    },
-    {
       path: '/sobre-nosotros',
       name: 'sobre-nosotros',
-      component: HomeView, // Temporal, redirige a home con scroll
+      component: () => import('../views/AboutView.vue'),
     },
     {
       path: '/contacto',
